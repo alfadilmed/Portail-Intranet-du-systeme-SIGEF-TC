@@ -1,41 +1,4 @@
 ## Diagrammes UML : Gestion des Ressources Humaines (RH)
-@startuml
-class Employe {
-  - idEmploye
-  - nom
-  - prenom
-  - poste
-  + Consulter()
-}
-
-class Contrat {
-  - idContrat
-  - type
-  - dateDebut
-  - dateFin
-  - salaire
-}
-
-class DossierRH {
-  - idDossier
-  - dateCreation
-  + Archiver()
-  + Soumettre()
-  + Valider()
-}
-
-class DemandeConge {
-  - idDemande
-  - dateDebut
-  - dateFin
-  - statut
-}
-
-Employe "1" -- "1" Contrat : Possède
-Employe "1" -- "1" DossierRH : Gère
-DossierRH "1" --> "1..*" DemandeConge : Contient
-
-@enduml
 
 ### 1. Diagramme de Cas d’Usage
 
